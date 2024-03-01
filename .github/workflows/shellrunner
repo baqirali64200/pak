@@ -1,0 +1,31 @@
+name: Main Branch Commit Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  execute_shell_command_1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run shell command 1
+        run: |
+          echo "Job 1: A commit was pushed to the main branch."
+          # Add your shell command for job 1 here
+
+  execute_shell_command_2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run shell command 2
+        run: |
+          echo "Job 2: A commit was pushed to the main branch."
+          # Add your shell command for job 2 here
